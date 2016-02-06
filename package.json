@@ -18,7 +18,6 @@
   "homepage": "https://github.com/ngerritsen/carloreeser#readme",
   "devDependencies": {
     "ftp": "^0.3.10",
-    "jsftp": "^1.5.3",
     "minimist": "^1.2.0"
   }
 }
