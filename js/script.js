@@ -1,66 +1,30 @@
 $(document).ready(function() {
+  sticky();
+  smoothScroll();
 
-	// ------------------------------------------------------ Waypoints
+  function sticky() {
+    new Waypoint.Sticky({
+      element: $('.stick-it')[0],
+      wrapper: '<div class="sticky-wrapper"/>',
+      stuckClass: 'stuck'
+    });
+  }
 
-	$('.stick-it').waypoint('sticky', {
-	  wrapper: '<div class="sticky-wrapper" />',
-	  stuckClass: 'stuck'
-	});
-	
-	$('#about').waypoint(function() {
-	});
-	
-	$('#portfolio').waypoint(function() {
-	});
-	
-	$('#contact').waypoint(function() {  
-	});
-	
-	// ------------------------------------------------------ Sliders
-	
-	$('.s1').cycle({ 
-	    fx:     'scrollHorz', 
-	    timeout	:  0, 
-	    slideResize: 0,
-	    containerResize: 1,
-	    prev    : '#prev1',  
-	    next    : '#next1'
-	});
-	
-	$('.s2').cycle({ 
-	    fx:     'scrollHorz', 
-	    timeout	:  0, 
-	    slideResize: 0,
-	    containerResize: 1,
-	    prev    : '#prev2',  
-	    next    : '#next2'
-	});
-	
-	$('.s3').cycle({ 
-	    fx:     'scrollHorz', 
-	    timeout	:  0, 
-	    slideResize: 0,
-	    containerResize: 1,
-	    prev    : '#prev3',  
-	    next    : '#next3'
-	});
-	
-	$('.s4').cycle({ 
-	    fx:     'scrollHorz', 
-	    timeout	:  0, 
-	    slideResize: 0,
-	    containerResize: 1,
-	    prev    : '#prev4',  
-	    next    : '#next4'
-	});
-	
-	$('.s5').cycle({ 
-	    fx:     'scrollHorz', 
-	    timeout	:  0, 
-	    slideResize: 0,
-	    containerResize: 1,
-	    prev    : '#prev5',  
-	    next    : '#next5'
-	});
-	
+  function smoothScroll() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (
+        location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') ||
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top - 80
+          }, 600);
+        }
+      }
+    });
+  }
 });
