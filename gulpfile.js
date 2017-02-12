@@ -39,7 +39,7 @@ gulp.task('html', () => {
     .pipe(
         ejs({
           buildNumber: process.env.TRAVIS_BUILD_NUMBER,
-          criticalCssFile: path.join(dest, 'css/critical.css')
+          criticalCssFile: path.join(dest, 'css/critical.css'),
           fs
         }, null, { ext: '.html' })
           .on('error', gutil.log)
@@ -65,9 +65,13 @@ gulp.task('watch', () => {
   gulp.watch(['src/index.ejs', path.join(dest, '**/*.css')], ['html'])
 })
 
-gulp.task('default', ['css', 'files'], callback => {
+gulp.task('default', callback => {
   dest = './.tmp'
   env = 'development'
 
-  runSequence(['watch', 'serve'], callback)
+  runSequence(
+    ['css', 'files'],
+    ['html', 'watch', 'serve'],
+    callback
+  )
 })
