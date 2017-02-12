@@ -39,7 +39,7 @@ gulp.task('html', () => {
     .pipe(
         ejs({
           buildNumber: process.env.TRAVIS_BUILD_NUMBER,
-          criticalCssFile: path.join(dest, 'critical.css')
+          criticalCssFile: path.join(dest, 'css/critical.css')
           fs
         }, null, { ext: '.html' })
           .on('error', gutil.log)
