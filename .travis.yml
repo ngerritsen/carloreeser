@@ -5,7 +5,7 @@ cache: "yarn"
 script:
   - yarn build
 after_success:
-  - curl -3 dist/index.html ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/carloreeser/;
+  - curl -3 -T dist/index.html ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/carloreeser/;
   - find dist/css -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/carloreeser/css/ \;
   - find dist/images -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/carloreeser/images/ \;
   - find dist/files -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/carloreeser/files/ \;
