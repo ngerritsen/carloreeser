@@ -70,8 +70,8 @@ gulp.task('default', callback => {
   env = 'development'
 
   runSequence(
-    ['css', 'files'],
-    ['html', 'watch', 'serve'],
+    ['css', 'files']
+    ['watch', 'serve'],
     callback
   )
 })

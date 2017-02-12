@@ -47,9 +47,7 @@ blockquote:before {
 
 .container {
 	overflow: hidden;
-	padding: 0 3.8rem;
-  max-width: 840px;
-	margin: 0 auto;
+	padding: 0 2.6rem;
 	position: relative;
 }
 
@@ -64,4 +62,12 @@ blockquote:before {
 .main {
 	display: block;
 	padding: 7rem 0 2rem;
+}
+
+@media screen and (min-width: 720px) {
+	.container {
+		max-width: 840px;
+		padding: 0 3.4rem;
+		margin: 0 auto;
+	}
 }
