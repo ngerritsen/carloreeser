@@ -1,0 +1,18 @@
+.header {
+	text-align: center;
+	padding: 5rem 0 8rem 0;
+	background-color: #0077d4;
+	width: 100%;
+}
+
+.header__avatar {
+	width: 24rem;
+	height: auto;
+}
+
+.header__title {
+	font-size: 4.8rem;
+	font-weight: 200;
+	margin-bottom: 7rem;
+	color: #fff;
+}

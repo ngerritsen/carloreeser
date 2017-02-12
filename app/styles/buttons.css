@@ -1,0 +1,46 @@
+.buttons {
+	text-align: center;
+}
+
+.button {
+	margin-bottom: 2rem;
+	border-radius: 7px;
+	border-width: 3px;
+	border-style: solid;
+	display: block;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 1.1rem 3.5rem;
+	text-decoration: none;
+	text-align: center;
+}
+
+.button--grey {
+	color: #999;
+	border-color: #999;
+}
+
+.button--grey:hover {
+	color: #888;
+	border-color: #888;
+}
+
+.button--blue {
+	color: #0077d4;
+	border-color: #0077d4;
+}
+
+.button--blue:hover {
+	color: #0c68b0;
+	border-color: #0c68b0;
+}
+
+@media screen and (min-width: 720px) {
+	.button {
+		display: inline-block;
+	}
+
+	.button--grey {
+		margin-right: 3rem;
+	}
+}

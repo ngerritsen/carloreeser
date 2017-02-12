@@ -1,0 +1,9 @@
+.projects {
+	list-style: circle;
+	margin-left: 2rem;
+}
+
+.projects__item {
+	padding-left: 1rem;
+	line-height: 1.5;
+}

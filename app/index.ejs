@@ -1,0 +1,156 @@
+<!doctype html>
+
+<meta charset="utf-8"/>
+<title>Carlo Reeser</title>
+
+<style>
+<%- fs.readFileSync(criticalCssFile) %>
+</style>
+
+<% const cssFiles = [
+    'css/style.css',
+    'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700'
+] %>
+
+<% for (path of cssFiles) { %>
+<link rel="preload" href="<%= path %>" as="style" onload="this.rel = 'stylesheet'"/>
+<% } %>
+
+<noscript>
+<% for (path of cssFiles) { %>
+    <link rel="stylesheet" href="<%= path %>"/>
+<% } %>
+</noscript>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!--[if lte IE 11]>
+    <p style="z-index: 9999; background-color: white; padding: 20px; margin: 0">
+        Sorry, but I do not support your version of Internet Explorer.
+        <a href="http://browsehappy.com/" target="_blank">Click here to upgrade your browser.</a>
+    </p>
+<![endif]-->
+
+<header class="header">
+    <h1 class="header__title">Carlo Reeser</h1>
+    <img class="header__avatar" src="images/carlo.png" alt="Carlo Reeser"/>
+</header>
+
+<main class="container">
+    <article class= "main">
+        <section class="section">
+            <h2 name="over-mij">Over Mij</h2>
+
+            <p>Mijn naam is Carlo Reeser. De afgelopen twee jaar heb ik als zelfstandig HR Adiviseur diverse organisaties geadviseerd via CareHr.nl. Hiervoor heb ik Ruim 25 jaar gewerkt als HR manager in een gespecialiseerd Revalidatiecentrum in de Randstad. Ik gaf leiding aan een afdeling P&O met zes HR medewerkers, twee opleidingsfunctionarissen en een aantal staffunctionarissen.</p>
+
+            <blockquote>Mijn visie is om medewerkers te laten excelleren.</blockquote>
+
+            <p>
+                Mijn laatste projecten waren:
+                <ul class="projects">
+                    <li class="projects__item">Het cöordineren van een Medewerker Tevredenheids Onderzoek.</li>
+                    <li class="projects__item">Het adviseren over mobiliteittrajecten.</li>
+                    <li class="projects__item">opzetten van een kenniscentrum met verbinding tussen onderzoek, opleiden en kwaliteitsbeleid.</li>
+                    <li class="projects__item">invoering digitaal competentiemanagement met 360 graden feedback.</li>
+                    <li class="projects__item">invoering duaal management.</li>
+                    <li class="projects__item">reorganisatie van de klinische afdelingen, waarbij medewerkers herplaatst werden met behulp van een op doelgroep gerichte “afdelingsfoto”.</li>
+                    <li class="projects__item">ondersteuning bij de opleiding tot revalidatiearts en GZ-psycholoog.</li>
+                </ul>
+            </p>
+        </section>
+
+        <section name="projecten" class="section">
+            <h2>Projecten</h2>
+
+            <p>In 2014 gestart met <strong>Care HR</strong> ondersteuning en advies.</p>
+
+            <p>Care HR kan zorginstellingen ondersteunen bij organisatieveranderingen, invoering competentiemanagement, arbeidstevredenheidsonderzoek, verzuimbegeleiding, e-HRM.</p>
+
+            <p>Voor meer informatie: <a href="https://www.carehr.nl" target="_top">carehr.nl</a></p>
+        </section>
+
+        <section name="visie" class="section">
+            <h2>Visie</h2>
+
+            <p>Mijn visie is om medewerkers te laten excelleren. Ik adviseer Raden van Bestuur in commissies Sociale Begeleiding waarbij ik op zoek ga naar een oplossing die voor alle partijen acceptabel, praktisch en pragmatisch is.</p>
+
+            <blockquote>Ik ben een steunpilaar voor management en zoek vertrouwen bij medewerkers door een transparante wijze van communiceren en het zoeken naar oplossingen.</blockquote>
+        </section>
+
+        <section class="section">
+            <p class="buttons">
+                <a href="files/CV_Carlo_Reeser.pdf" class="button button--grey">Download mijn CV</a>
+                <a href="https://nl.linkedin.com/pub/carlo-reeser/8/633/85b" target="_blank" class="button button--blue">Naar mijn LinkedIn</a>
+            </p>
+
+            <blockquote>
+                Ervaren,
+                Doortastend,
+                Overwicht,
+                Plezier,
+                Innovatief,
+                Altijd op zoek naar ontwikkeling,
+                Glas Halfvol
+            </blockquote>
+        </section>
+
+        <section class="section">
+            <h2>Referenties</h2>
+
+            <section class="sub-section">
+                <h3>Fenneke Sopers</h3>
+                <p class="reference">&ldquo;In de bijna 6 jaar op de afdeling P&O met Carlo Reeser als leidinggevende heb ik Carlo leren kennen als iemand die zeer betrokken is bij zijn medewerkers. Hij denkt met je mee en geeft veel ruimte om je te ontwikkelen. Hierdoor motiveert hij zijn medewerkers om zoveel mogelijk uit zichzelf te halen. Voor Carlo werken lijkt vaak meer op mét hem werken, wat zorgt voor een erg prettige werksfeer.&rdquo;</p>
+            </section>
+
+            <section class="sub-section">
+                <h3>Gerard Groenendijk (Manager Kinderrevalidatie) </h3>
+                <p class="reference">&ldquo;Ik heb Carlo Reeser ervaren als een zeer betrokken hoofd P&O met goede dossierkennis, een grote mate van collegialiteit, een zeer brede interesse en kennis op het gebied van arbeidsrecht en de CAO.&rdquo;</p>
+            </section>
+
+            <section class="sub-section">
+                <h3>Peter Van Hees (Controller at Sophia Revalidatie) </h3>
+                <p class="reference">&ldquo;Carlo Reeser is een HRM Manager voor wie het bedrijfsbelang altijd boven aan staat, zonder uit het oog te verliezen dat het de mensen zijn die een bedrijf maken wat het is. Hij is een vakman en is altijd op zoek naar mogelijkheden die efficiency winst opleveren. Hij is zeer geínterresseerd in nieuwe ict oplossingen en bovenal een prettige open persoonlijkheid om mee samen te werken.&rdquo;</p>
+            </section>
+        </section>
+    </article>
+</main>
+
+<footer class="contact">
+    <div class="container">
+        <h2>Contact</h2>
+
+        <p>U kunt contact met mij opnemen via mail of telefoon.</p>
+
+        <ul class="contact__items">
+            <li class="contact__item">
+                <a class="contact__link" href="mailto:info@carehr.nl">
+                    <img src="images/mail.png" class="contact__link-icon"/>info@carehr.nl
+                </a>
+            </li>
+            <li class="contact__item">
+                <a class="contact__link" href="tel:+310642468484">
+                    <img src="images/phone.png" class="contact__link-icon"/>(06) 42 46 84 84
+                </a>
+            </li>
+        </ul>
+
+        <p class="contact__copyright">
+            &copy; Niels Gerritsen 2017 - <a href="https://nielsgerritsen.com" class="contact__copyright-link">nielsgerritsen.com</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49106655-3', 'carloreeser.nl');
+    ga('send', 'pageview');
+</script>
+
+<script>
+ /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+(function(w){"use strict";var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};function loadCB(){if(ss.addEventListener){ss.removeEventListener("load",loadCB)}ss.media=media||"all"}if(ss.addEventListener){ss.addEventListener("load",loadCB)}ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(loadCB);return ss};if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}})(typeof global!=="undefined"?global:this);(function(w){if(!w.loadCSS){return}var rp=loadCSS.relpreload={};rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){}};rp.poly=function(){var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"){w.loadCSS(link.href,link);link.rel=null}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);if(w.addEventListener){w.addEventListener("load",function(){w.clearInterval(run)})}}})(this);
+</script>

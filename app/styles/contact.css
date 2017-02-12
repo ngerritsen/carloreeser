@@ -1,0 +1,64 @@
+.contact {
+	padding: 7rem 0;
+	background-color: #333;
+	color: #ddd;
+}
+
+.contact__items {
+	margin-bottom: 7rem;
+}
+
+.contact__item {
+	list-style: none;
+	color: #fff;
+	display: block;
+	margin-bottom: 3rem;
+}
+
+.contact__link-icon {
+	position: relative;
+	top: 0.6rem;
+	width: 2.5rem;
+	height: auto;
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+.contact__link,
+.contact__link:hover,
+.contact__link:active,
+.contact__link:focus,
+.contact__link:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.contact__link:hover {
+	text-decoration: underline;
+}
+
+.contact__copyright {
+	text-align: center;
+	color: #777;
+	margin: 0;
+}
+
+.contact__copyright-link,
+.contact__copyright-link:visited,
+.contact__copyright-link:hover,
+.contact__copyright-link:focus,
+.contact__copyright-link:active {
+	color: #777;
+}
+
+.contact__copyright-link:hover {
+	cursor: pointer;
+	color: #999;
+}
+
+@media screen and (min-width: 480px) {
+	.contact__item {
+		width: 45%;;
+		display: inline-block;
+	}
+}
